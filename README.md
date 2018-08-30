@@ -104,6 +104,6 @@ The dataset can be downloaded and unzipped as follows:
 A new folder called ```jpg``` should appear
 
 #### Restructuring
-Originally the dataset is structured by having the first 80 images belonging to the first species, the next 80 images to the second, and so on. The file ```restructure.py```, found in the repo, will build the structure we want if it is run in the same folder as the ```jpg````-folder. If push comes to shove this step can also be done manually.
+Originally the dataset is structured by having the first 80 images belonging to the first species, the next 80 images to the second, and so on. The file ```restructure.py```, found in the repo, will build the structure we want if it is run in the same folder as the ```jpg```-folder. If push comes to shove this step can also be done manually.
 
 The newly created folder called ```flowers``` should be placed in the same directory as the guide if you want to run through the guide. If this is the case you are ready to go
