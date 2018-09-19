@@ -42,7 +42,7 @@ We can create an environment with our newly installed conda installation using t
 
 ```
 [user@instance]:~$ source .bashrc 
-[user@instance]:~$ conda create –name ml python=3.6
+[user@instance]:~$ conda create --name ml python=3.6
 ```
 This command will create a fresh environment called "ml" with python 3.6 and a basic set of packages installed. We can activate the environment as such:
 
