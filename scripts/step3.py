@@ -6,7 +6,7 @@ from keras.preprocessing.image import ImageDataGenerator
 
 np.random.seed(1234)
 batches = ImageDataGenerator(preprocessing_function=preprocess_input)
-batches = batches.flow_from_directory('flowers/train', target_size=(224, 224))
+batches = batches.flow_from_directory('flowers/train', target_size=(224, 224), batch_size=4)
 
 indices = batches.class_indices
 labels = [None] * 17

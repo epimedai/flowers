@@ -15,10 +15,10 @@ train_generator = ImageDataGenerator(preprocessing_function=preprocess_input,
     zoom_range=.2,
     rotation_range=30,
 )
-train_batches = train_generator.flow_from_directory('flowers/train', target_size=(224, 224))
+train_batches = train_generator.flow_from_directory('flowers/train', target_size=(224, 224), batch_size=4)
 
 val_generator = ImageDataGenerator(preprocessing_function=preprocess_input)
-val_batches = val_generator.flow_from_directory('flowers/val', target_size=(224, 224))
+val_batches = val_generator.flow_from_directory('flowers/val', target_size=(224, 224), batch_size=4)
 
 indices = train_batches.class_indices
 labels = [None] * 17
@@ -44,17 +44,3 @@ model = Model(inputs, preds)
 model.compile(loss='categorical_crossentropy', optimizer=Adam(lr=1e-4), metrics=['acc'])
 
 model.fit_generator(train_batches, epochs=100, validation_data=val_batches)
-"""
-for X, y in generator:
-    preds = model.predict(X)
-    decoded_preds = decode_predictions(preds, top=1)
-    for i in range(len(X)):
-        img = X[i].astype(np.uint8)
-        label = labels[np.argmax(y[i])]
-        predicted = decoded_preds[i]
-        
-        fig = plt.figure(figsize=(10, 10))
-        plt.imshow(img)
-        fig.suptitle('GT: {}, Predicted: {}'.format(label, predicted))
-        plt.show()
-"""
