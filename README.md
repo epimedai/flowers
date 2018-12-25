@@ -13,7 +13,6 @@ The goal of this setup is creating an environment where we can run the code list
 - A working Python 3 environment with Tensorflow and Keras installed
 - A folder containing the dataset structured [as we want it](#preparing-the-dataset)
 
-Both of these steps are explained here largely by virtue of a Unix terminal, but a solution for Windows users will hopefully be available soon.
 
 ### Configuring the environment
 Setting up our environment means installing Python and all the packages we will be needing for this project. We are in this guide going to use [conda](https://www.conda.io) as an environment manager and [pip](https://pypi.org/project/pip/) as a package manager. There does however exist a wide variety of options out there, and as long as you are able to run the [sanity check](#environment-sanity-check) you should be good.
@@ -21,9 +20,9 @@ Setting up our environment means installing Python and all the packages we will 
 #### Installing conda
 Conda is a package, dependency and environment manager for several languages, but in this project we will take advantage of the environment management capabilities. We will be using a version called Miniconda, which is installed by downloading and running a bash-script. Note that both the URL and the name of the script varies depending on your OS.
 
+##### macOS and Linux
 macOS: https://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86\_64.sh 
 Linux: https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86\_64.sh
-
 ```
 [user@instance]:~$ wget <url> 
 [user@instance]:~$ sh Miniconda3-latest-<OS>-x86_64.sh
@@ -37,47 +36,59 @@ Do you wish the installer to prepend the Miniconda3 install location to PATH in 
 
 where we recommend you answer yes. Once the installer finishes Miniconda is installed, including both Python and pip ready for use.
 
+##### Windows
+The miniconda installer for windows can be downloaded from 
+https://conda.io/miniconda.html
+
+Follow installation guide and when it is completed, open the "Anaconda Prompt" from your start menu. Where the linux guide uses a terminal to execute commands, the windows user will use this "Anaconda prompt"
+. 
+
 #### Creating the environment
-We can create an environment with our newly installed conda installation using the command ```conda create```. We do, however, have to source the .bashrc (or .bash_profile for Mac users) file modified in the previous step:
+We can create an environment with our newly installed conda installation using the command ```conda create```. We do, however, have to source the .bashrc (or .bash_profile for Mac users) file modified in the previous step. This is not nessecary for windows:
 
 ```
-[user@instance]:~$ source .bashrc 
-[user@instance]:~$ conda create --name ml python=3.6
+$ source .bashrc 
 ```
-This command will create a fresh environment called "ml" with python 3.6 and a basic set of packages installed. We can activate the environment as such:
-
+Next, we run the command that creates a new environment. Here we name it "ml" and give it the default python version 3.6.
 ```
-[user@instance]:~$ source activate ml
+$ conda create --name ml python=3.6
 ```
-
+The new environment has to be activated.
+###### Linux / macOS
+```
+$ source activate ml
+```
+###### Windows
+```
+$ conda activate ml
+```
 If everything went as intended the command line prompt should now be prefixed with the name of the environment.
 
 ```
-[(ml) user@instance]:~$ .
+(ml) $ .
 ```
 
 #### Installing packages
 The two packages necessary for this project is Tensorflow and Keras, which can both be installed by pip
 
 ```
-[(ml) user@instance]:~$ pip install tensorflow
-[(ml) user@instance]:~$ pip install keras
+(ml) $ pip install tensorflow
+(ml) $ pip install keras
 ```
-
-<b>(Note: Users with a GPU should install tensorflow-gpu instead of tensorflow)</b>
+<b>(Note: Users with a GPU could install tensorflow-gpu instead of tensorflow to greatly increase the training efficiency, but as it is not nessecary to complete this guide, we will stick with the default CPU version)</b>
 
 We also recommend installing Jupyter to be able to run the guide as a notebook:
 
 ```
-[(ml) user@instance]:~$ pip install jupyter
+(ml) $ pip install jupyter
 ```
 
 #### Environment sanity check
 We can check that everything works as it should by importing the packages in Python:
 
 ```
-[(ml) user@instance]:~$ python -c “import tensorflow” 
-[(ml) user@instance]:~$ python -c “import keras”
+(ml) $ python -c “import tensorflow” 
+(ml) $ python -c “import keras”
 ```
 
 If you are able to run these commands without anything failing horribly (warnings are OK!) you are all set up.
@@ -97,11 +108,11 @@ We will be using 65 images per species for training and 15 images per species fo
 The dataset can be downloaded and unzipped as follows:
 
 ```
-[(ml) user@instance]:~$ wget http://www.robots.ox.ac.uk/~vgg/data/flowers/17/17flowers.tgz
-[(ml) user@instance]:~$ tar -xvzf 17flowers.tgz
+(ml) $ wget http://www.robots.ox.ac.uk/~vgg/data/flowers/17/17flowers.tgz
+(ml) $ tar -xvzf 17flowers.tgz
 ```
-
-A new folder called ```jpg``` should appear
+or by downloading the zipped file from http://www.robots.ox.ac.uk/~vgg/data/flowers/17/17flowers.tgz
+and extracting the files into this repos root folder
 
 #### Restructuring
 Originally the dataset is structured by having the first 80 images belonging to the first species, the next 80 images to the second, and so on. The file ```restructure.py```, found in the repo, will build the structure we want if it is run in the same folder as ```jpg```. If push comes to shove this step can also be done manually.
