@@ -24,8 +24,8 @@ Conda is a package, dependency and environment manager for several languages, bu
 macOS: https://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86\_64.sh 
 Linux: https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86\_64.sh
 ```
-[user@instance]:~$ wget <url> 
-[user@instance]:~$ sh Miniconda3-latest-<OS>-x86_64.sh
+$ wget <url> 
+$ sh Miniconda3-latest-<OS>-x86_64.sh
 ```
 
 Running the script will trigger a bunch of prompts, one of which is 
