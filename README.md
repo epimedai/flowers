@@ -38,7 +38,7 @@ where we recommend you answer yes. Once the installer finishes Miniconda is inst
 
 ##### Windows
 The miniconda installer for windows can be downloaded from 
-https://conda.io/miniconda.html
+https://conda.io/en/latest/miniconda.html
 
 Follow installation guide and when it is completed, open the "Anaconda Prompt" from your start menu. Where the linux guide uses a terminal to execute commands, the windows user will use this "Anaconda prompt"
 . 
