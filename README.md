@@ -15,14 +15,14 @@ The goal of this setup is creating an environment where we can run the code list
 
 
 ### Configuring the environment
-Setting up our environment means installing Python and all the packages we will be needing for this project. We are in this guide going to use [conda](https://www.conda.io) as an environment manager and [pip](https://pypi.org/project/pip/) as a package manager. There does however exist a wide variety of options out there, and as long as you are able to run the [sanity check](#environment-sanity-check) you should be good.
+Setting up our environment means installing Python and all the packages we will be needing for this project. We are in this guide going to use [conda](https://conda.io) as an environment manager and [pip](https://pypi.org/project/pip/) as a package manager. There does however exist a wide variety of options out there, and as long as you are able to run the [sanity check](#environment-sanity-check) you should be good.
 
 #### Installing conda
 Conda is a package, dependency and environment manager for several languages, but in this project we will take advantage of the environment management capabilities. We will be using a version called Miniconda, which is installed by downloading and running a bash-script. Note that both the URL and the name of the script varies depending on your OS.
 
 ##### macOS and Linux
-macOS: https://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86\_64.sh 
-Linux: https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86\_64.sh
+macOS: https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
+Linux: https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 ```
 $ wget <url> 
 $ sh Miniconda3-latest-<OS>-x86_64.sh
