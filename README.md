@@ -76,6 +76,8 @@ The two packages necessary for this project is Tensorflow and Keras, which can b
 ```
 (ml) $ pip install tensorflow
 (ml) $ pip install keras
+(ml) $ pip install matplotlib
+(ml) $ pip install pillow
 ```
 <b>(Note: Users with a GPU could install tensorflow-gpu instead of tensorflow to greatly increase the training efficiency, but as it is not nessecary to complete this guide, we will stick with the default CPU version)</b>
 
