@@ -14,7 +14,7 @@ for key in indices:
 
 for X, y in batches:
     fig, ax = plt.subplots(1, 4)
-    
+
     for i in range(len(X)):
         img = X[i].astype(np.uint8)
         label = labels[np.argmax(y[i])]
@@ -23,6 +23,6 @@ for X, y in batches:
         ax[i].set_title(label)
         ax[i].set_xticks([])
         ax[i].set_yticks([])
-    
+
     plt.show()
-    break # We only need the first batch
+    break  # We only need the first batch
