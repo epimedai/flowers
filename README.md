@@ -22,7 +22,9 @@ Conda is a package, dependency and environment manager for several languages, bu
 
 ##### macOS and Linux
 macOS: https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
+
 Linux: https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+
 ```
 $ wget <url> 
 $ sh Miniconda3-latest-<OS>-x86_64.sh
@@ -74,6 +76,8 @@ The two packages necessary for this project is Tensorflow and Keras, which can b
 ```
 (ml) $ pip install tensorflow
 (ml) $ pip install keras
+(ml) $ pip install matplotlib
+(ml) $ pip install pillow
 ```
 <b>(Note: Users with a GPU could install tensorflow-gpu instead of tensorflow to greatly increase the training efficiency, but as it is not nessecary to complete this guide, we will stick with the default CPU version)</b>
 
@@ -105,16 +109,16 @@ The dataset we will be using consists of images of flowers, 17 species with 80 s
 We will be using 65 images per species for training and 15 images per species for validation.
 
 #### Downloading the dataset
-The dataset can be downloaded and unzipped as follows:
+The dataset can be downloaded and unzipped into this repo's root folder (remeber to ```git clone```it first) as follows:
 
 ```
 (ml) $ wget http://www.robots.ox.ac.uk/~vgg/data/flowers/17/17flowers.tgz
 (ml) $ tar -xvzf 17flowers.tgz
 ```
 or by downloading the zipped file from http://www.robots.ox.ac.uk/~vgg/data/flowers/17/17flowers.tgz
-and extracting the files into this repos root folder
+and extracting the files into this repo's root folder
 
 #### Restructuring
-Originally the dataset is structured by having the first 80 images belonging to the first species, the next 80 images to the second, and so on. The file ```restructure.py```, found in the repo, will build the structure we want if it is run in the same folder as ```jpg```. If push comes to shove this step can also be done manually.
+Originally, the dataset is structured by having the first 80 images belonging to the first species, the next 80 images to the second, and so on. The file ```restructure.py```, found in the repo, will build the structure we want if it is run in the same folder as ```jpg```. This step can also be done manually, see [Preparing the dataset](README.md#preparing-the-dataset) section for more info.
 
-The newly created folder called ```flowers``` should be placed in the same directory as the guide if you want to run it. When this is the case you are ready to go!
+Make sure that the newly created folder is called ```flowers``` (this will happen automatically after running ```restructure.py```) and is placed in the same directory as this guide, i.e. root folder of this repo. When this is the case you are ready to go!
