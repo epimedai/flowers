@@ -87,8 +87,8 @@ We also recommend installing Jupyter to be able to run the guide as a notebook:
 We can check that everything works as it should by importing the packages in Python:
 
 ```
-(ml) $ python -c “import tensorflow” 
-(ml) $ python -c “import keras”
+(ml) $ python -c "import tensorflow" 
+(ml) $ python -c "import keras"
 ```
 
 If you are able to run these commands without anything failing horribly (warnings are OK!) you are all set up.
