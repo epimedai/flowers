@@ -1,5 +1,5 @@
 # Flower species classification
-This repo contains the basic building blocks for creating an image classification model for recognizing flowers of various species. It exists as an extension of [this](https://www.tekna.no/kurs/maskinlaringsworkshop---python-36454/) machine learning workshop, hosted by Tekna. The repo consists of three main components:
+This repo contains the basic building blocks for creating an image classification model for recognizing flowers of various species. It exists as an extension of [this](https://www.tekna.no/kurs/maskinlaringsworkshop---python-36454/) machine learning workshop, and subsequent variants, hosted by [Tekna](https://www.tekna.no). The repo consists of three main components:
 
 1. The slides used in the workshop
 2. A fully working guide implemented as a Jupyter Notebook
@@ -12,6 +12,8 @@ The goal of this setup is creating an environment where we can run the code list
 
 - A working Python 3 environment with Tensorflow and Keras installed
 - A folder containing the dataset structured [as we want it](#preparing-the-dataset)
+
+Additionally there is a brief introduction to jupyter notebooks, for those wanting to run the guide.
 
 
 ### Configuring the environment
@@ -122,3 +124,12 @@ and extracting the files into this repo's root folder
 Originally, the dataset is structured by having the first 80 images belonging to the first species, the next 80 images to the second, and so on. The file ```restructure.py```, found in the repo, will build the structure we want if it is run in the same folder as ```jpg```. This step can also be done manually, see [Preparing the dataset](README.md#preparing-the-dataset) section for more info.
 
 Make sure that the newly created folder is called ```flowers``` (this will happen automatically after running ```restructure.py```) and is placed in the same directory as this guide, i.e. root folder of this repo. When this is the case you are ready to go!
+
+## Jupyter notebooks
+[Jupyter notebook] is a web application for running and sharing code and documentation in a user friendly and readable format. If you installed jupyter as defined [here](#installing-packages) you are all set up to start using notebooks. To start, run jupyter from the terminal:
+
+```
+(ml) $ jupyter notebook
+```
+
+If you open [http://localhost:8888](http://localhost:8888) you should see the file-structure of the folder where you run the command, and if any .ipynb-files (such as the guide) exists, simply click them to get started.
