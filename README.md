@@ -1,5 +1,5 @@
 # Flower species classification
-This repo contains the basic building blocks for creating an image classification model for recognizing flowers of various species. It exists as an extension of [this](https://www.tekna.no/kurs/maskinlaringsworkshop---python-36454/) machine learning workshop, and subsequent variants, hosted by [Tekna](https://www.tekna.no). The repo consists of three main components:
+This repo contains the basic building blocks for creating an image classification model for recognizing flowers of various species. It is an extension of [this](https://www.tekna.no/kurs/maskinlaringsworkshop---python-36454/) machine learning workshop, and subsequent variants, hosted by [Tekna](https://www.tekna.no). The repo consists of three main components:
 
 1. The slides used in the workshop
 2. A fully working guide implemented as a Jupyter Notebook
@@ -17,10 +17,10 @@ Additionally there is a brief introduction to jupyter notebooks, for those wanti
 
 
 ### Configuring the environment
-Setting up our environment means installing Python and all the packages we will be needing for this project. We are in this guide going to use [conda](https://conda.io) as an environment manager and [pip](https://pypi.org/project/pip/) as a package manager. There does however exist a wide variety of options out there, and as long as you are able to run the [sanity check](#environment-sanity-check) you should be good.
+Setting up our environment means installing Python and all the packages we will be needing for this project. In this guide we are going to use [conda](https://conda.io) as an environment manager and [pip](https://pypi.org/project/pip/) as a package manager. There is, however, a wide variety of options out there, but as long as you are able to run the [sanity check](#environment-sanity-check) you should be good.
 
 #### Installing conda
-Conda is a package, dependency and environment manager for several languages, but in this project we will take advantage of the environment management capabilities. We will be using a version called Miniconda, which is installed by downloading and running a bash-script. Note that both the URL and the name of the script varies depending on your OS.
+Conda is a package, dependency and environment manager for several languages, but in this project we will take advantage of the environment management capabilities. We will be using a version called Miniconda, which is installed by downloading and running a bash-script. Note that both the URL and the name of the script depend on your operating system.
 
 ##### macOS and Linux
 macOS: https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
@@ -44,8 +44,7 @@ where we recommend you answer yes. Once the installer finishes Miniconda is inst
 The miniconda installer for windows can be downloaded from 
 https://conda.io/en/latest/miniconda.html
 
-Follow installation guide and when it is completed, open the "Anaconda Prompt" from your start menu. Where the linux guide uses a terminal to execute commands, the windows user will use this "Anaconda prompt"
-. 
+Follow the installation guide until it is completed. Open the "Anaconda Prompt" from your start menu. If you are using linux, you should use the terminal to execute the commands, but if you are using windows you should use the "Anaconda prompt". 
 
 #### Creating the environment
 We can create an environment with our newly installed conda installation using the command ```conda create```. We do, however, have to source the .bashrc (or .bash_profile for Mac users) file modified in the previous step. This is not nessecary for windows:
@@ -73,7 +72,7 @@ If everything went as intended the command line prompt should now be prefixed wi
 ```
 
 #### Installing packages
-The two main packages necessary for this project is Tensorflow and Keras, which can both be installed by pip. Additionally we will install matplotlib and PIL for interacting with, and specifically showing, images.
+The two most important packages needed for this project are Tensorflow and Keras, which can both be installed by pip. Additionally we will install matplotlib and PIL for interacting and showing images.
 
 ```
 (ml) $ pip install tensorflow
@@ -81,7 +80,7 @@ The two main packages necessary for this project is Tensorflow and Keras, which 
 (ml) $ pip install matplotlib
 (ml) $ pip install pillow
 ```
-<b>(Note: Users with a GPU could install tensorflow-gpu instead of tensorflow to greatly increase the training efficiency, but as it is not nessecary to complete this guide, we will stick with the default CPU version)</b>
+<b>(Note: Users with a GPU could install tensorflow-gpu instead of tensorflow to greatly increase the training efficiency, but this is not necessary for this workshop)</b>
 
 We also recommend installing Jupyter to be able to run the guide as a notebook:
 
@@ -118,10 +117,10 @@ The dataset can be downloaded and unzipped into this repo's root folder (remeber
 (ml) $ tar -xvzf 17flowers.tgz
 ```
 or by downloading the zipped file from http://www.robots.ox.ac.uk/~vgg/data/flowers/17/17flowers.tgz
-and extracting the files into this repo's root folder
+and extracting the files into this repo's root folder.
 
 #### Restructuring
-Originally, the dataset is structured by having the first 80 images belonging to the first species, the next 80 images to the second, and so on. The file ```restructure.py```, found in the repo, will build the structure we want if it is run in the same folder as ```jpg```. This step can also be done manually, see [Preparing the dataset](README.md#preparing-the-dataset) section for more info.
+The newly downloaded dataset is structured by having the first 80 images belonging to the first species, the next 80 images to the second, and so on. For the sake of simplicity, we want to change this structure. By executing the script ```restructure.py``` in the same folder as ```jpg```, the images will be strucutred as described in [Preparing the dataset](README.md#preparing-the-dataset). This step can also be done manually.
 
 Make sure that the newly created folder is called ```flowers``` (this will happen automatically after running ```restructure.py```) and is placed in the same directory as this guide, i.e. root folder of this repo. When this is the case you are ready to go!
 
