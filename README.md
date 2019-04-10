@@ -120,7 +120,7 @@ or by downloading the zipped file from http://www.robots.ox.ac.uk/~vgg/data/flow
 and extracting the files into this repo's root folder.
 
 #### Restructuring
-The newly downloaded dataset is structured by having the first 80 images belonging to the first species, the next 80 images to the second, and so on. For the sake of simplicity, we want to change this structure. By executing the script ```restructure.py``` in the same folder as ```jpg```, the images will be strucutred as described in [Preparing the dataset](README.md#preparing-the-dataset). This step can also be done manually.
+The newly downloaded dataset is structured by having the first 80 images belonging to the first species, the next 80 images to the second, and so on. For the sake of simplicity, we want to change this structure. By executing the script ```restructure.py``` (found in this repo) in the same folder as ```jpg```, the images will be strucutred as described in [Preparing the dataset](README.md#preparing-the-dataset). This step can also be done manually.
 
 Make sure that the newly created folder is called ```flowers``` (this will happen automatically after running ```restructure.py```) and is placed in the same directory as this guide, i.e. root folder of this repo. When this is the case you are ready to go!
 
