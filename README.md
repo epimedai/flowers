@@ -1,3 +1,6 @@
+## Note!!
+Sometimes github struggles to visualize jupyter notebook files. If you try clicking the file guide.ipynb and nothing renders (except possibly an error message), go to [https://nbviewer.jupyter.org/github/epimedai/flowers/blob/master/guide.ipynb](https://nbviewer.jupyter.org/github/epimedai/flowers/blob/master/guide.ipynb) to view the file through Jupyters own notebook viewer.
+
 # Flower species classification
 This repo contains the basic building blocks for creating an image classification model for recognizing flowers of various species. It is an extension of [this](https://www.tekna.no/kurs/maskinlaringsworkshop---python-36454/) machine learning workshop, and subsequent variants, hosted by [Tekna](https://www.tekna.no). The repo consists of three main components:
 
