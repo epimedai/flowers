@@ -73,7 +73,7 @@ If everything went as intended the command line prompt should now be prefixed wi
 ```
 
 #### Installing packages
-The two packages necessary for this project is Tensorflow and Keras, which can both be installed by pip
+The two main packages necessary for this project is Tensorflow and Keras, which can both be installed by pip. Additionally we will install matplotlib and PIL for interacting with, and specifically showing, images.
 
 ```
 (ml) $ pip install tensorflow
@@ -126,7 +126,7 @@ Originally, the dataset is structured by having the first 80 images belonging to
 Make sure that the newly created folder is called ```flowers``` (this will happen automatically after running ```restructure.py```) and is placed in the same directory as this guide, i.e. root folder of this repo. When this is the case you are ready to go!
 
 ## Jupyter notebooks
-[Jupyter notebook] is a web application for running and sharing code and documentation in a user friendly and readable format. If you installed jupyter as defined [here](#installing-packages) you are all set up to start using notebooks. To start, run jupyter from the terminal:
+[Jupyter notebook](http://www.jupyter.org) is a web application for running and sharing code and documentation in a user friendly and readable format. If you installed jupyter as defined [here](#installing-packages) you are all set up to start using notebooks. To start, run jupyter from the terminal (note: You should be in the folder where guide.ipynb is located, which should be the root folder of this repo):
 
 ```
 (ml) $ jupyter notebook
