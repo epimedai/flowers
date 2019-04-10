@@ -14,7 +14,8 @@ labels = [None] * 17
 for key in indices:
     labels[indices[key]] = key
 
-model = VGG19(include_top=True, input_shape=(224, 224, 3), weights='imagenet')
+model = VGG19(include_top=True, input_shape=(224, 224, 3), 
+              weights='imagenet')
 
 for X, y in batches:
     preds = model.predict(X)
