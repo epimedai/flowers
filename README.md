@@ -38,7 +38,7 @@ $ sh Miniconda3-latest-<OS>-x86_64.sh
 Running the script will trigger a bunch of prompts, one of which is 
 
 ```
-Do you wish the installer to prepend the Miniconda3 install location to PATH in your /home/esten/.bashrc ? [yes|no]
+Do you wish the installer to initialize Miniconda3 by running conda init? [yes|no]
 ```
 
 where we recommend you answer yes. Once the installer finishes Miniconda is installed, including both Python and pip ready for use.
@@ -60,11 +60,6 @@ Next, we run the command that creates a new environment. Here we name it "ml" an
 $ conda create --name ml python=3.6
 ```
 The new environment has to be activated.
-###### Linux / macOS
-```
-$ source activate ml
-```
-###### Windows
 ```
 $ conda activate ml
 ```
@@ -114,6 +109,8 @@ We will be using 65 images per species for training and 15 images per species fo
 
 #### Downloading the dataset
 Clone (download) the Flowers guide from https://github.com/epimedai/flowers/blob/master/guide.ipynb to your  machine. If you have installed git, you can ```git clone``` it, otherwise you can visit the GitHub web site, press either Download or Raw, and save the file to a local folder. This folder will now be your repo's root folder.
+
+(If you are struggling cloning the repo, try using HTTPS instead of SSH. You can toggle this under the "Clone or download" button at the top of this page)
 
 Before continuing, Windows users must download and install wget, for instance from https://eternallybored.org/misc/wget/ (version 1.20).
 
