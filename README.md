@@ -139,6 +139,7 @@ Make sure that the newly created folder is called ```flowers``` (this will happe
 If you open [http://localhost:8888](http://localhost:8888) you should see the file-structure of the folder where you run the command, and if any .ipynb-files (such as the guide) exists, simply click them to get started.
 
 **WINDOWS ISSUES**
+
 You might experience some problems starting the kernel when you open the notebook. First, be sure that you are running the environment with administrator rights (right click on cmd, or conda-terminal, and click "run as administrator"). If you get [this](https://stackoverflow.com/questions/49326164/jupyter-notebook-dead-kernel) error, follow the answer given. If not, you can try to uninstall the following packages:
 
 + ipykernel
