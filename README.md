@@ -41,7 +41,7 @@ Running the script will trigger a bunch of prompts, one of which is
 Do you wish the installer to initialize Miniconda3 by running conda init? [yes|no]
 ```
 
-where we recommend you answer yes. Once the installer finishes Miniconda is installed, including both Python and pip ready for use.
+where we recommend you to answer yes. Once the installer finishes the installation of Miniconda, Python and pip are ready for use.
 
 ##### Windows
 The miniconda installer for windows can be downloaded from 
@@ -98,6 +98,7 @@ If you are able to run these commands without anything failing horribly (warning
 
 Note that whether or not this setup runs smoothly depends heavily on what already exists on your OS. Typical problems relate to image-specific libraries used by tensorflow. If you run into trouble you should get far by googling, or by sending me an email at esten@epimed.ai
 
+
 ### Preparing the dataset
 The dataset we will be using consists of images of flowers, 17 species with 80 samples each, and was created by the Visual Geometry Group at the University of Oxford. For later convenience we want the dataset structured as follows:
 
@@ -136,3 +137,16 @@ Make sure that the newly created folder is called ```flowers``` (this will happe
 ```
 
 If you open [http://localhost:8888](http://localhost:8888) you should see the file-structure of the folder where you run the command, and if any .ipynb-files (such as the guide) exists, simply click them to get started.
+
+**WINDOWS ISSUES**
+
+You might experience some problems starting the kernel when you open the notebook. First, be sure that you are running the environment with administrator rights (right click on cmd, or conda-terminal, and click "run as administrator"). If you get [this](https://stackoverflow.com/questions/49326164/jupyter-notebook-dead-kernel) error, follow the answer given. If not, you can try to uninstall the following packages:
+
++ ipykernel
++ ipython
++ jupyter_client
++ jupyter_core
++ traitlets
++ ipython_genutils
+
+Clean conda's cache by running ```conda clean -tipsy```. Then, install the packages again.
